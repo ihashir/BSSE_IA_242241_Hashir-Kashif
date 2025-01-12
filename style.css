@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+/* for a tags in paragraphs */
+.linkTheme{
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-color: red;
+}
+.linkTheme:hover{
+    color: red;
+}
+
+/* navigation bar styling  */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 84px;
+    background-color: #750014;
+    position: fixed;
+    width: 100vw;
+    z-index: 9;
+}
+.nav .logo{
+    height: 46px;
+    margin-left: 20px;
+}
+.nav .navLinks{
+    display: flex;
+    gap: 22px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.nav .navLinks li{
+    float: left;
+    list-style-type: none;
+    
+}
+.nav .navLinks li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    
+}
+.nav .navLinks li a::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: 27px;
+    left: 0;
+    opacity: 0;
+}
+.nav .navLinks li a:hover::after {
+    opacity: 1;
+}
+
+.nav .search {
+    background-color: #FF1423;
+    width: 84px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .search img{
+    width: 26px;
+}
+
+
+/* content container styling*/
+
+
+.contentContainer{
+    width: 100vw;
+    position: relative;
+    padding-top: 84px;
+    overflow-x: hidden;
+   
+}
+
+.content{
+    width: 70vw;
+    margin-left: 30vw;
+    height: auto;
+    
+    
+}
+
+
+.content .updates{
+    background-color: #d4d4d4;
+    padding: 30px 0;
+    padding-left: 30px;
+}
+
+/* news section in content  */
+
+.news{
+    padding: 0 20px;
+
+    
+}
+.heroNews{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+.heroNews img{
+    width: 100%;
+}
+.heroNews p{
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.heroNews ul{
+    display: flex;
+    gap: 10px;
+}
+
+.heroNews ul li{
+float: left;
+list-style-type: none;
+}
+
+.news .moreItems{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.moreItems .item{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+.moreItems .item h3{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.moreItems .item p{
+    line-height: 24px;
+}
+.more .item img{
+    width: 100%;
+}
+.moreTitle{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* footer  */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #620011;
+    color: white;
+    height: 150px;
+    gap: 45px;
+    margin-top: 50px;
+}
+footer .subscribe {
+    
+    border: 1px solid red;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+footer .subscribe:hover{
+    color: black;
+    background-color: red;
+}
+.footerContent{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footerContent a{
+    color: white!important;
+    
+}
+.footerContent a:hover{
+    color: red!important;
+}
+
+
+/* siderbar code  */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 30vw;
+    position: fixed;
+    bottom: 0;
+    top: 84px;
+    background-color: #F7F7F7;
+    
+}
+.sidebar h4{
+    text-align: center;
+}
+.search{
+    height: 80px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.228);
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 30px;
+    background-color: white;
+}
+.search input{
+    width: 100%;
+    height: 90%;
+    border: 0;
+    outline: none;
+
+}
+
+@media only screen and (max-width: 950px) {
+    .nav .navLinks{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    
+    .sidebar{
+        position: relative;
+        top: auto;
+        bottom: auto;
+        width: 100%;
+        /* max-width: 400px; */
+        padding: 50px 0;
+    }
+    .content{
+        width: 100%;
+        margin-left: 0;
+    }
+    .search{
+        /* max-width: 400px; */
+    }
+    .heroNews p{
+        font-size: 20px;
+    }
+    .moreItems .item{
+        width: 100%;
+    }
+   footer{
+    padding: 0 15px;
+    /* height: 200px; */
+   }
+   footer span{
+width: 100%;
+   }
+   .footerContent{
+    width: 100%;
+   }
+}
